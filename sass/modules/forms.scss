@@ -1,0 +1,76 @@
+// 4D 69 6C 6E  4C 74 64
+// =================================================================
+// 		Miln Ltd
+// 			Digital Experiences
+// 		Forms
+// =================================================================
+
+
+label {
+	font-size: 1.1em;
+	color: $colorType;
+	padding: 10px 0;
+}	
+
+fieldset {
+	margin-top: 15px;
+	box-sizing: border-box;
+	float: left;
+	width: 100%;
+}
+
+fieldset.form-half {
+	width:(100% / 2) - ($grid-spacing * 6 / 12);
+
+	&:nth-child(even) {
+		margin-left: $grid-spacing;
+	}
+}
+
+input, textarea {
+	cursor: pointer;
+	width: 100%;
+	padding: 18px 20px;
+	box-sizing: border-box;
+	margin-top: 20px;
+	font-size: 1.1em;
+	@include border-radius(0px);
+	border: 1px solid #fff;
+	background: $colorThree;
+	outline: 0;
+	font-family: $base-font-family;
+	-webkit-appearance: none;
+	color: $colorType;
+	margin-bottom: 20px;
+	@include transition(all, 0.2s, ease-in-out);
+
+	&:focus {
+		border: 1px solid $colorOne;
+		color: $colorOne;
+	}
+
+	@include mq("small", "max-width") {
+		padding: 12px 17px;
+		margin-bottom: 10px;
+	}
+
+	@include mq("nano", "max-width") {
+		padding: 10px 13px;
+	}
+}
+
+input[type="submit"] {
+	width: 200px;
+	float: right;
+	background: $colorOne;
+	border: 0;
+	color: #fff;
+
+	&:hover {
+		background: darken($colorOne, 10%);
+	}
+
+	@include mq("small", "max-width") {
+		width: 100%;
+	}
+}

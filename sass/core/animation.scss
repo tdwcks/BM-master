@@ -1,0 +1,38 @@
+// 4D 69 6C 6E  4C 74 64
+// =================================================================
+//    Miln Ltd
+//      Digital Experiences
+//    Animation
+// =================================================================
+
+@include keyframes(fade) {
+  0% {
+    opacity: 0;
+  }
+  100% {
+   opacity: 1;
+  }
+}
+
+
+@include keyframes(slideUp) {
+  0% {
+    @include transform(translateY(100px));
+    opacity: 0;
+  }
+
+  15% {
+  	 @include transform(translateY(0));
+  	 opacity: 1;
+  }
+
+  85% {
+  	 @include transform(translateY(0px));
+  	 opacity: 1;
+  }
+
+  100% {
+   @include transform(translateY(100px));
+    opacity: 0;
+  }
+}

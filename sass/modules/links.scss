@@ -1,0 +1,26 @@
+// 4D 69 6C 6E  4C 74 64
+// =================================================================
+// 		Miln Ltd
+// 			Digital Experiences
+// 		Links
+// =================================================================
+
+.link-btn-one {
+	color: #fff;
+	padding: 10px 30px 12px 30px;
+	border: 2px solid #fff;
+	@include border-radius(10px);
+	display: block;
+	margin: 0 auto;
+	width: 120px;
+	text-align: center;
+	margin-top: 30px;
+	cursor: pointer;
+	@include transition(all, 0.2s, ease-in-out);
+	text-decoration: none;
+
+	&:hover {
+		background: #fff;
+		color: $colorOne;
+	}
+}

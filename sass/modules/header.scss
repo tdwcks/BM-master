@@ -1,0 +1,229 @@
+// 4D 69 6C 6E  4C 74 64
+// =================================================================
+// 		Miln Ltd
+// 			Digital Experiences
+// 		Header
+// =================================================================
+
+header {
+	position: fixed;
+	z-index: 5000;
+	background: #fff;
+	width: 100%;
+	border-top: 3px solid $colorOne;
+	height: 85px;
+	top: 0;
+	overflow: visible;
+	padding-bottom: 30px;
+	padding-top: 30px;
+
+	nav {
+		margin-top: 30px;
+		margin-left: 0px;
+	}
+
+	nav ul li {
+		
+		display: inline;	
+		padding-left: 40px;
+
+		a {
+			@include transition(all, 0.2s, ease-in-out);
+			color: $colorOne;
+			font-size: 1.1em;
+			letter-spacing: 1px;
+			text-decoration: none;
+			cursor: pointer;
+			text-transform: uppercase;
+			border-bottom: 2px solid #fff;
+		}
+	}
+
+	nav ul li.home {
+		display: none;
+	}
+
+	nav ul li a.current {
+		border-bottom: 2px solid $colorOne;
+	}
+
+	nav ul li a:hover {
+		border-bottom: 2px solid $colorTwo;
+	}
+
+	.language-selector {
+		float: right;
+		margin-top: 32px;
+
+		.language-selected {
+			cursor: pointer;
+		}
+
+		.language-selected:after  {
+			content: "";
+			display: block;
+			border-left: 5px solid transparent;
+			border-right: 5px solid transparent;
+			border-bottom: 7px solid $colorOne;
+			position: absolute;
+			margin-top: 6px;
+			padding-top: 7px;
+			right: 0;
+			@include transform(rotate(-180deg));
+		}
+
+		.language-selected.active:after {
+			margin-top: 1px;
+			@include transform(rotate(-360deg));
+		}
+
+		a {
+			color: $colorType;
+			text-transform: uppercase;
+			font-size: 0.8em;
+			letter-spacing: 1px;
+			text-decoration: none;
+			clear: both;
+			width: 130px;
+			float: left;
+			cursor: pointer;
+		}
+
+		ul.dropdown {
+			display: none; // Show on dropdown
+			background: #fff;
+			z-index: 50;
+			position: absolute;
+			margin-top: 83px;
+			padding: 0;
+		}
+
+		ul.dropdown.active {
+			display: block;
+		}
+
+		ul li {
+			margin: 0;
+			padding: 0px 0;
+			margin-bottom: 20px;
+			list-style-type: none;
+		}
+
+		ul li a {
+			cursor: pointer;
+			padding: 5px 10px;
+			border-bottom: 1px solid $colorThree;
+		}
+
+		ul li:first-child a {
+			padding-top: 10px;
+		}
+
+		ul li:last-child a {
+			padding-bottom: 10px;
+		}
+
+		ul li a:hover {
+			background: $colorThree;
+		}
+
+		span {
+			float: left;
+			display: block;
+			margin-top: 2px;
+		}
+
+		img {
+			margin-right: 15px;
+			width: 30px;
+			float: left;
+		}
+	}
+
+	@include mq("medium", "max-width") {
+		height: 65px;
+
+		a.home {
+		margin-top: 25px;
+		}
+		
+		nav {
+			margin-top: 22px;
+			margin-left: 17px;
+
+			ul li {
+				padding-left: 10px;
+			}
+
+			ul li a {
+				font-size: 1em;
+			}
+		}
+
+		.language-selector {
+			margin-top: 25px;
+
+			ul.dropdown {
+				margin-top: 70px;
+			}
+		}
+	}
+
+	@include mq("small", "max-width") {
+		height: 70px;
+
+		nav {
+			display: none;
+		}
+
+		.col-3 {
+			width: 30%;
+		}
+
+		.col-3:last-child {
+			float: right;
+		}
+
+		.language-selector {
+			margin-top: 20px;
+
+			ul li a:hover {
+				background: #fff;
+			}
+
+			ul.dropdown {
+				margin-top: 80px;
+			}
+		}
+	}
+
+	@include mq("extra-small", "max-width") {
+		height: 80px;
+
+		.col-3 {
+			float: left;
+			width: 45%;
+			margin: 0;
+		}
+
+		.language-selector {
+			margin-top: 25px;
+
+			ul.dropdown {
+				margin-top: 80px;
+			}
+		}
+	}
+
+	@include mq("super-small", "max-width") {
+		height: 45px;
+
+		.language-selector {
+			margin-top: 10px;
+
+			ul.dropdown {
+				margin-top: 60px;
+			}
+		}
+	}
+}
