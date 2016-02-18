@@ -58,7 +58,7 @@
 
 				<h1>Building More</h1>
 
-				<p class="large">Helping bring our clients vision to life. Undertaking projects of all sizes throughout Baqueira and Mallorca.</p>
+				<p class="large">Helping bring our clients vision to life. Undertaking projects of all sizes throughout Baqueira and Mallorca.</p>
 
 				<a href="#what" class="link-btn-one">Find Out More</a>
 
@@ -126,7 +126,7 @@
 
 					<h2>What We Do</h2>
 
-					<p class="large">From new-builds and complete refurbishments to on-going maintenance, we believe that we are creating a better life for our clients and our satisfaction comes from taking our clients ideas and delivering sound results.</p>
+					<p class="large">From new-builds and complete refurbishments to on-going maintenance, we believe that we are  creating a better life for our clients and our satisfaction comes from taking our clients ideas and delivering sound results.</p>
 
 					<p class="large">From our extensive experience in delivering residential projects, we understand that the key to ultimate quality of the final product is flexibility, communication and professionalism. A collaborative approach with all parties helps to ensure the smooth and efficient progress of each project, whatever the size.</p>
 					

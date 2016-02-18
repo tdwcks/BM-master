@@ -140,6 +140,12 @@ header {
 		}
 	}
 
+	@include mq("large", "min-width") {
+		nav ul li {
+			padding-left: 50px;
+		}
+	}
+
 	@include mq("medium", "max-width") {
 		height: 65px;
 

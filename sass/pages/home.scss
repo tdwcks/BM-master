@@ -182,6 +182,9 @@
 }
 
 .about {
+	position: relative;
+	z-index: 1;
+	
 	.col-8 {
 		display: block;
 		margin: 0 auto;
