@@ -285,7 +285,7 @@
 				<div class="col-4">
 
 					<h4>BM Property &amp; Projects</h4>
-					<p>C/. Alicante, 58 Pol. Ind. Son Bugadelles 07180 Santa Ponça – Calvià </p>
+					<p>C/. Mar Mediterráneo, 43A Local 16 Pol. Ind. Son Bugadelles 07180 Santa Ponsa Mallorca</p>
 
 				</div> <!-- col-4 -->
 
