@@ -13,7 +13,13 @@
 	-webkit-clip-path: polygon(0 0, 100% 0%, 100% 65%, 0% 100%);
 	clip-path: polygon(0 0, 100% 0%, 100% 65%, 0% 100%);
 	margin-top: 120px;
+	position: relative;
+	z-index: 10;
 	overflow: hidden;
+
+	.grid-container {
+		border: none;
+	}
 
 	.col-7 {
 		display: block;
@@ -184,6 +190,15 @@
 .about {
 	position: relative;
 	z-index: 1;
+
+	.grid-container {
+		border-right: 1px solid $colorTwo;
+		border-left: 1px solid $colorTwo;
+		margin-top: -250px;
+		padding-top: 250px;
+		z-index: 10;
+		position: relative;
+	}
 	
 	.col-8 {
 		display: block;
@@ -233,10 +248,6 @@
 
 		.poly-strip {
 			height: 800px;
-
-			img {
-				margin-top: -400px;
-			}
 		}
 	}
 
@@ -285,6 +296,11 @@
 			}
 		}
 	}	
+}
+
+.grid-container {
+	border-right: 1px solid $colorTwo;
+	border-left: 1px solid $colorTwo
 }
 
 .what {
@@ -460,7 +476,11 @@
 }
 
 .project {
-	margin-bottom: 50px;
+
+	.grid-container {
+		margin-top: -50px;
+		padding-top: 50px;
+	}
 
 	.logo-centre {
 		width: 150px;
@@ -479,6 +499,10 @@
 .contact {
 	height: auto;
 	overflow: auto;
+
+	.grid-container {
+	border: none;
+	}
 
 	h2 {
 		margin-top: 0px;
