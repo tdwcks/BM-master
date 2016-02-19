@@ -94,31 +94,39 @@
 
 		<div class="grid-container">
 
-			<div class="col-8">
+			<div class="row">
 
-				<h2>About</h2>
+				<div class="col-8">
 
-				<p class="large">With over 40 years combined experience, BM provides bespoke construction and refurbishment expertise for the prime residential market. Our aim is to help you Build More.</p>
+					<h2>About</h2>
 
-				<p class="large">We have recently and successfully completed residential developments to a very high specification in the Pyrenees and Mallorca. Please contact us to discuss your ideas.</p>
+					<p class="large">With over 40 years combined experience, BM provides bespoke construction and refurbishment expertise for the prime residential market. Our aim is to help you Build More.</p>
 
-			</div> <!-- col-8 -->
+					<p class="large">We have recently and successfully completed residential developments to a very high specification in the Pyrenees and Mallorca. Please contact us to discuss your ideas.</p>
+
+				</div> <!-- col-8 -->
+ 
+			</div> <!-- row -->
+
+			<div class="row">
+
+				<div class="poly-strip">
+
+					<img src="img/bm-1.jpg">
+					<img src="img/bm-2.jpg">
+					<img src="img/bm-1.jpg">
+
+				</div> <!-- poly-strip -->
+
+			</div>  <!-- row -->
 
 		</div> <!-- grid-container -->
 
-		<div class="poly-strip">
-
-			<img src="img/bm-1.jpg">
-			<img src="img/bm-2.jpg">
-			<img src="img/bm-1.jpg">
-
-		</div> <!-- poly-strip -->
-
 	</section> <!-- about -->
 
-	<section id="what" class="what">
+	<div class="grid-container">
 
-		<div class="grid-container">
+	<section id="what" class="what">
 
 			<div class="row">
 
@@ -214,9 +222,9 @@
 
 			</div> <!-- row -->
 
-		</div> <!-- grid-container -->
+		</section> <!-- what -->
 
-	</section> <!-- what -->
+	</div> <!-- grid-container -->
 
 	<section id="project" class="project">
 
