@@ -192,8 +192,6 @@
 	z-index: 1;
 
 	.grid-container {
-		border-right: 1px solid $colorTwo;
-		border-left: 1px solid $colorTwo;
 		margin-top: -250px;
 		padding-top: 250px;
 		z-index: 10;
@@ -296,11 +294,6 @@
 			}
 		}
 	}	
-}
-
-.grid-container {
-	border-right: 1px solid $colorTwo;
-	border-left: 1px solid $colorTwo
 }
 
 .what {
@@ -431,6 +424,14 @@
 		}
 	}
 
+	@include mq("small", "max-width") {
+		background: #fff;
+
+		&:after {
+			background: #fff;
+		}
+	}
+
 	@include mq("extra-small", "max-width") {
 
 		.row:last-child .col-4 {
@@ -476,6 +477,8 @@
 }
 
 .project {
+	position: relative;
+	z-index: 10;
 
 	.grid-container {
 		margin-top: -50px;

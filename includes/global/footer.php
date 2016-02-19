@@ -3,7 +3,7 @@
 <script type="text/javascript" src="js/plugins/swiper.min.js"></script>
 <script type="text/javascript" src="js/global.js"></script>
 <script>
-	var swiper = new Swiper('.swiper-container', {
+	var swiper = new Swiper('#project .grid-container .swiper-container', {
 	    pagination: '.swiper-pagination',
 	    paginationClickable: true,
 	    nextButton: '.swiper-button-next',
