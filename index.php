@@ -264,7 +264,7 @@
 
 			</div> <!-- row -->
 
-			<div class="row">
+			<div class="row details">
 
 				<div class="col-4">
 

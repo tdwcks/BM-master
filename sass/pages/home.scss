@@ -503,8 +503,8 @@
 	height: auto;
 	overflow: auto;
 
-	.grid-container {
-	border: none;
+	.details {
+		padding: 40px 40px 0px 40px;
 	}
 
 	h2 {
@@ -537,7 +537,7 @@
 	}
 
 	.row:last-child {
-		padding-bottom: 100px;
+		padding-bottom: 0;
 		margin-bottom: 75px;
 		border-bottom: 1px solid $colorTwo;
 	}

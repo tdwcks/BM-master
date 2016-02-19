@@ -1417,8 +1417,8 @@ header {
 .contact {
   height: auto;
   overflow: auto; }
-  .contact .grid-container {
-    border: none; }
+  .contact .details {
+    padding: 40px 40px 0px 40px; }
   .contact h2 {
     margin-top: 0px; }
   .contact h4 {
@@ -1441,7 +1441,7 @@ header {
     padding: 0;
     float: none; }
   .contact .row:last-child {
-    padding-bottom: 100px;
+    padding-bottom: 0;
     margin-bottom: 75px;
     border-bottom: 1px solid #d3d3d3; }
   .contact .row:first-child {
