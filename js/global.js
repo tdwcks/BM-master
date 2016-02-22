@@ -6,18 +6,12 @@
 // =================================================================
 
 $(function() {
-
-
     $(document).on( "click", ".language-selected", function() {
       $('.dropdown').toggleClass('active');
       $(this).toggleClass('active');
   });
 
     $('nav').singlePageNav({
-      offset: $('header').outerHeight()
-    });
-
-     $('body').singlePageNav({
       offset: $('header').outerHeight()
     });
 

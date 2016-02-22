@@ -907,7 +907,7 @@ input[type="submit"] {
 
 header {
   position: fixed;
-  z-index: 5000;
+  z-index: 50000;
   background: #fff;
   width: 100%;
   border-top: 3px solid #a38d32;
@@ -918,10 +918,17 @@ header {
   padding-top: 30px; }
   header nav {
     margin-top: 30px;
+    margin-left: 10px; }
+  header nav.spanish {
+    margin-top: 30px;
     margin-left: 0px; }
+    header nav.spanish ul li {
+      padding-left: 10px; }
+      header nav.spanish ul li a {
+        font-size: 1em; }
   header nav ul li {
     display: inline;
-    padding-left: 40px; }
+    padding-left: 25px; }
     header nav ul li a {
       -webkit-transition: all 0.2s ease-in-out;
       -moz-transition: all 0.2s ease-in-out;
@@ -943,7 +950,8 @@ header {
     border-bottom: 2px solid #d3d3d3; }
   header .language-selector {
     float: right;
-    margin-top: 32px; }
+    margin-top: 32px;
+    z-index: 10; }
     header .language-selector .language-selected {
       cursor: pointer; }
     header .language-selector .language-selected:after {
@@ -977,7 +985,8 @@ header {
       clear: both;
       width: 130px;
       float: left;
-      cursor: pointer; }
+      cursor: pointer;
+      z-index: 5000; }
     header .language-selector ul.dropdown {
       display: none;
       background: #fff;
@@ -1087,6 +1096,8 @@ header {
   .link-btn-one:hover {
     background: #fff;
     color: #a38d32; }
+  .link-btn-one.spanish {
+    width: 130px; }
 
 .home {
   width: 100%;
@@ -1113,6 +1124,8 @@ header {
       border-bottom: 3px solid #a38d32;
       margin: 65px auto 25px auto;
       display: block; }
+    .home .col-7 h1.spanish {
+      width: 400px; }
   .home img {
     top: 0;
     position: fixed;

@@ -7,7 +7,7 @@
 
 header {
 	position: fixed;
-	z-index: 5000;
+	z-index: 50000;
 	background: #fff;
 	width: 100%;
 	border-top: 3px solid $colorOne;
@@ -19,13 +19,26 @@ header {
 
 	nav {
 		margin-top: 30px;
+		margin-left: 10px;
+	}
+
+	nav.spanish {
+		margin-top: 30px;
 		margin-left: 0px;
+
+		ul li {
+			padding-left: 10px;
+
+			a {
+				font-size: 1em;
+			}
+		}
 	}
 
 	nav ul li {
 		
 		display: inline;	
-		padding-left: 40px;
+		padding-left: 25px;
 
 		a {
 			@include transition(all, 0.2s, ease-in-out);
@@ -54,6 +67,7 @@ header {
 	.language-selector {
 		float: right;
 		margin-top: 32px;
+		z-index: 10;
 
 		.language-selected {
 			cursor: pointer;
@@ -87,6 +101,7 @@ header {
 			width: 130px;
 			float: left;
 			cursor: pointer;
+			z-index: 5000;
 		}
 
 		ul.dropdown {

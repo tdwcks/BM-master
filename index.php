@@ -1,12 +1,58 @@
-<?php include 'includes/global/header.php'; ?>
+<?php 
+	session_start();
+	header('Cache-control: private'); // IE 6 FIX
+	 
+	if(isSet($_GET['lang']))
+	{
+	$lang = $_GET['lang'];
+	 
+	// register the session and set the cookie
+	$_SESSION['lang'] = $lang;
+	 
+	setcookie('lang', $lang, time() + (3600 * 24 * 30));
+	}
+	else if(isSet($_SESSION['lang']))
+	{
+	$lang = $_SESSION['lang'];
+	}
+	else if(isSet($_COOKIE['lang']))
+	{
+	$lang = $_COOKIE['lang'];
+	}
+	else
+	{
+	$lang = 'en';
+	}
+	 
+	switch ($lang) {
+	  case 'en':
+	  $lang_file = 'lang.en.php';
+	  break;
+	 
+	  case 'de':
+	  $lang_file = 'lang.de.php';
+	  break;
+	 
+	  case 'es':
+	  $lang_file = 'lang.es.php';
+	  break;
+	 
+	  default:
+	  $lang_file = 'lang.en.php';
+	 
+	}
+	 
+	include_once 'languages/'.$lang_file;
 
+	include 'includes/global/header.php'; 
+?>
 <header>
 
 	<div class="grid-container">
 
 		<div class="col-3">
 
-		<a href="#home"><img src="img/bm_logo.svg"/></a>
+		<a><img src="img/bm_logo.svg"/></a>
 
 		</div> <!-- col-3 -->
 
@@ -17,11 +63,11 @@
 			<nav>
 
 				<ul>
-					<li class="home"><a href="#home">Home</a></li>
-					<li><a href="#about">About</a></li>
-					<li><a href="#what">What We Do</a></li>
-					<li><a href="#project">Projects</a></li>
-					<li><a href="#contact">Contact</a></li>
+					<li class="home"><a href="#home"><?php echo $lang['MENU_HOME']; ?></a></li>
+					<li><a href="#about"><?php echo $lang['MENU_ABOUT']; ?></a></li>
+					<li><a href="#what"><?php echo $lang['MENU_WHAT_WE_DO']; ?></a></li>
+					<li><a href="#project"><?php echo $lang['MENU_PROJECTS']; ?></a></li>
+					<li><a href="#contact"><?php echo $lang['MENU_CONTACT']; ?></a></li>
 				</ul>
 
 			</nav>
@@ -32,12 +78,31 @@
 
 			<div class="language-selector">
 
-				<a class="language-selected"><img src="img/great_britain.svg"/><span>English</span></a>
+				<?php 
+					switch ($lang) {
+					  case 'en':
+					  echo 'English';
+						echo '<a class="language-selected"><img src="img/great_britain.svg"/><span>English</span></a>';
+					  break;
+					 
+					  case 'de':
+						echo '<a class="language-selected"><img src="img/german.svg"/><span>Deutsche</span></a>';
+					  break;
+					 
+					  case 'es':
+						echo '<a class="language-selected"><img src="img/spain.svg"/><span>Español</span></a>';
+					  break;
+					 
+					  default:
+					  	echo '<a class="language-selected"><img src="img/great_britain.svg"/><span>English</span></a>';
+					 
+					}
+				?>
 
 				<ul class="dropdown">
-					<li><a href=""><img src="img/great_britain.svg"/><span>English</span></a></li>
-					<li><a href=""><img src="img/german.svg"/><span>German</span></a></li>
-					<li><a href=""><img src="img/spain.svg"/><span>Spanish</span></a></li>
+					<li><a href="?lang=en"><img src="img/great_britain.svg"/><span>English</span></a></li>
+					<li><a href="?lang=de"><img src="img/german.svg"/><span>Deutsche</span></a></li>
+					<li><a href="?lang=es"><img src="img/spain.svg"/><span>Español</span></a></li>
 				</ul>
 
 			</div> <!-- language-selector -->
@@ -56,11 +121,7 @@
 
 			<div class="col-7">
 
-				<h1>Building More</h1>
-
-				<p class="large">Helping bring our clients vision to life. Undertaking projects of all sizes throughout Baqueira and Mallorca.</p>
-
-				<a href="#what" class="link-btn-one">Find Out More</a>
+				<?php echo $lang['MAIN']; ?>
 
 			</div> <!-- col-7 -->
 
@@ -98,11 +159,9 @@
 
 				<div class="col-8">
 
-					<h2>About</h2>
+					<h2><?php echo $lang['ABOUT_TITLE']; ?></h2>
 
-					<p class="large">With over 40 years combined experience, BM provides bespoke construction and refurbishment expertise for the prime residential market. Our aim is to help you Build More.</p>
-
-					<p class="large">We have recently and successfully completed residential developments to a very high specification in the Pyrenees and Mallorca. Please contact us to discuss your ideas.</p>
+					<?php echo $lang['ABOUT_TEXT']; ?>
 
 				</div> <!-- col-8 -->
  
@@ -132,12 +191,10 @@
 
 				<div class="col-8 center">
 
-					<h2>What We Do</h2>
+					<h2><?php echo $lang['WHAT_WE_DO_TITLE']; ?></h2>
 
-					<p class="large">From new-builds and complete refurbishments to on-going maintenance, we believe that we are  creating a better life for our clients and our satisfaction comes from taking our clients ideas and delivering sound results.</p>
+					<?php echo $lang['WHAT_WE_DO_TEXT']; ?>
 
-					<p class="large">From our extensive experience in delivering residential projects, we understand that the key to ultimate quality of the final product is flexibility, communication and professionalism. A collaborative approach with all parties helps to ensure the smooth and efficient progress of each project, whatever the size.</p>
-					
 				</div> <!-- col-8 -->
 
 			</div> <!-- row -->
@@ -154,9 +211,7 @@
 
 				<div class="col-6">
 
-					<h3>Residential</h3>
-
-					<p>By implementing our experience, expertise, attention to detail and by working to very high standards, we aim to deliver a service that will exceed your expectations. Once BM engages in a project, we embrace a true team mentality with one goal in mind – to complete all projects to the highest possible standard.</p>
+					<?php echo $lang['RESIDENTIAL_TEXT']; ?>
 
 				</div>
 
@@ -174,9 +229,7 @@
 
 				<div class="col-6">
 
-					<h3>New Build &amp; Total Conversion</h3>
-
-					<p>We would define major projects and complete conversions as significant building work. This in most cases requires the client to vacate the premises to enable us to execute the work, although this isn’t always necessary as each project is unique. With this in mind we treat all projects with extreme care and respect, placing the client’s needs first.</p>
+					<?php echo $lang['NEW_BUILD_TEXT']; ?>
 
 				</div>
 
@@ -194,9 +247,7 @@
 
 				<div class="col-6">
 
-					<h3>Refurbishment</h3>
-
-					<p>Through our comprehensive knowledge of refurbishment projects, we are well aware of the importance of understanding, recognising and advising on the scope of solutions available for each particular project. BM is also aware of the challenges involved in working in occupied buildings and how to minimise disruption. The pre-construction and manufacturing periods of the refurbishment process require a keen hands-on approach. We place much emphasis on communication between the client, our own project team, the supply chain and design teams.</p>
+					<?php echo $lang['REFURBISHMENT_TEXT']; ?>
 
 				</div>
 
@@ -214,9 +265,7 @@
 
 				<div class="col-6">
 
-					<h3>Aftercare &amp; Maintenance</h3>
-
-					<p>We understand that our clients are busy and have other priorities, that’s why we have our aftercare and maintenance service. This is essential for the running of an efficient house and household. Each completed project can be followed up with a tailored proposal for on-going maintenance and our support and assistance remains in place for as long as our clients require.</p>
+					<?php echo $lang['AFTERCARE_TEXT']; ?>
 
 				</div>
 
@@ -256,9 +305,7 @@
 
 				<div class="col-8">
 
-					<h2>Contact</h2>
-
-					<p class="large">If you are interested in working on a project together, please get in contact on the details below.</p>
+					<?php echo $lang['CONTACT_TEXT']; ?>
 
 				</div> <!-- col-8 -->
 

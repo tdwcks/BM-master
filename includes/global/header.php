@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset=utf-8 />
-<title>BM → Property &amp; Projects</title>
+<title><?php echo $lang['PAGE_TITLE']; ?></title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <script src="https://use.typekit.net/ehx4agf.js"></script>
