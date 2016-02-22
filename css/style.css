@@ -808,13 +808,13 @@ button.swiper-pagination-bullet {
     transform: rotate(360deg); } }
 .swiper-container {
   width: 100%;
-  height: 700px; }
+  height: 650px; }
   @media (max-width: 1130px) {
     .swiper-container {
-      height: 500px; } }
+      height: 450px; } }
   @media (max-width: 870px) {
     .swiper-container {
-      height: 440px; } }
+      height: 400px; } }
   @media (max-width: 760px) {
     .swiper-container {
       height: 250px; } }
@@ -837,6 +837,8 @@ button.swiper-pagination-bullet {
   -webkit-align-items: center;
   align-items: center;
   width: 100%; }
+  .swiper-slide img {
+    width: 100%; }
 
 footer {
   width: 100%;

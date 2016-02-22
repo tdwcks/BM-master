@@ -284,9 +284,12 @@
 			<div class="swiper-container">
 
 		        <div class="swiper-wrapper">
-		            <div class="swiper-slide"><img src="img/slide-1.jpg"></div>
-		            <div class="swiper-slide"><img src="img/slide-1.jpg"></div>
-		            <div class="swiper-slide"><img src="img/slide-1.jpg"></div>
+		            <div class="swiper-slide"><img src="img/bm_1.jpg"></div>
+		            <div class="swiper-slide"><img src="img/bm_2.jpg"></div>
+		            <div class="swiper-slide"><img src="img/bm_3.jpg"></div>
+		            <div class="swiper-slide"><img src="img/bm_4.jpg"></div>
+		            <div class="swiper-slide"><img src="img/bm_5.jpg"></div>
+		            <div class="swiper-slide"><img src="img/bm_6.jpg"></div>
 		        </div>
 		        <!-- Add Arrows -->
 		        <div class="swiper-button-next"></div>
