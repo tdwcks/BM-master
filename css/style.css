@@ -126,11 +126,11 @@ html {
   border-left: 1px solid #d3d3d3; }
   @media (max-width: 870px) {
     .grid-container {
-      width: 92%;
+      width: 93%;
       border: none; } }
   @media (max-width: 760px) {
     .grid-container {
-      width: 95%; } }
+      width: 93%; } }
 
 .row:after {
   display: block;
@@ -833,6 +833,8 @@ button.swiper-pagination-bullet {
   @media (max-width: 760px) {
     .swiper-container {
       height: 300px; } }
+  .swiper-container .swiper-button-next, .swiper-container .swiper-button-prev {
+    display: none; }
 
 .swiper-slide {
   text-align: center;

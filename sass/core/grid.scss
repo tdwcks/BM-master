@@ -15,12 +15,12 @@
   border-left: 1px solid $colorTwo;
 
   @include mq("small", "max-width") {
-    width: 92%;
+    width: 93%;
     border: none;
   }
 
   @include mq("extra-small", "max-width") {
-    width: 95%;
+    width: 93%;
   }
 }
 
