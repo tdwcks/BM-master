@@ -1144,6 +1144,8 @@ header {
       border-bottom: 3px solid #a38d32;
       margin: 65px auto 25px auto;
       display: block; }
+    .home .col-7 h1.spanish {
+      width: intrinsic; }
   .home img {
     top: 0;
     position: fixed;
@@ -1162,7 +1164,9 @@ header {
         .home .col-7 h1 {
           margin: 25px auto 25px auto;
           font-size: 2.5em;
-          width: 330px; } }
+          width: 330px; }
+        .home .col-7 h1.spanish, .home .col-7 h1.german {
+          font-size: 2em; } }
   @media (max-width: 595px) {
     .home .col-7 h1 {
       margin: 15px auto 15px auto;
