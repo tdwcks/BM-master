@@ -32,14 +32,10 @@
 		}
 
 		h1 {
-			width: 393px;
+			width: intrinsic;
 			border-bottom: 3px solid $colorOne;
 			margin: 65px auto 25px auto;
 			display: block;
-		}
-
-		h1.spanish {
-			width: 400px;
 		}
 	}
 

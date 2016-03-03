@@ -1140,12 +1140,10 @@ header {
     .home .col-7 h1, .home .col-7 p {
       color: #fff; }
     .home .col-7 h1 {
-      width: 393px;
+      width: intrinsic;
       border-bottom: 3px solid #a38d32;
       margin: 65px auto 25px auto;
       display: block; }
-    .home .col-7 h1.spanish {
-      width: 400px; }
   .home img {
     top: 0;
     position: fixed;
