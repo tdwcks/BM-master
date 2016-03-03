@@ -511,7 +511,7 @@
 
 	@include mq("extra-small", "max-width") {
 		.logo-centre {
-			margin: 25px auto 50px auto;
+			display: none;
 		}
 	}
 }

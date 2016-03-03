@@ -1455,7 +1455,7 @@ header {
     display: block; }
   @media (max-width: 760px) {
     .project .logo-centre {
-      margin: 25px auto 50px auto; } }
+      display: none; } }
 
 .contact {
   height: auto;

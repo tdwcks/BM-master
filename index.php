@@ -281,7 +281,7 @@
 
 		<div class="grid-container">
 					
-				<img class="logo-centre" src="img/bm-mark.svg">
+			<img class="logo-centre" src="img/bm-mark.svg">
 
 			<div class="swiper-container">
 
