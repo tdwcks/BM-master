@@ -27,7 +27,7 @@ header {
 		margin-left: 0px;
 
 		ul li {
-			padding-left: 10px;
+			padding-left: 15px;
 
 			a {
 				font-size: 1em;
@@ -98,7 +98,7 @@ header {
 			letter-spacing: 1px;
 			text-decoration: none;
 			clear: both;
-			width: 130px;
+			width: 140px;
 			float: left;
 			cursor: pointer;
 			z-index: 5000;
@@ -169,6 +169,7 @@ header {
 		}
 		
 		nav {
+			display: none;
 			margin-top: 22px;
 			margin-left: 25px;
 

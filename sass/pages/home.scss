@@ -48,7 +48,7 @@
 		position: fixed;
 		overflow: hidden;
 		height: 1000px;
-		z-index: -10;
+		z-index: -100;
 		@include animation(slide 60s linear alternate infinite);
 	}
 
@@ -201,6 +201,11 @@
 		z-index: 10;
 		position: relative;
 	}
+
+	.row {
+		z-index: 100;
+		position: relative;
+	}
 	
 	.col-8 {
 		display: block;
@@ -212,20 +217,22 @@
 	.poly-strip {
 		margin-top: 30px;
 		width: 100%;
-		height: 800px;
-		-webkit-clip-path: polygon(100% 0, 100% 70%, 0 100%, 0 30%);
-		clip-path: polygon(100% 0, 100% 70%, 0 100%, 0 30%);
-		background: $colorThree;
+		height: 650px;
 		overflow: hidden;
-		z-index: 100;
 		position: relative;
 
-		img {
+		div {
 			width: 100%;
-			position: absolute;
-			top: 0;
-			left: 0;
-			top: 0;
+			opacity: 0;
+			
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				-webkit-clip-path: polygon(100% 0, 100% 70%, 0 100%, 0 30%);
+				clip-path: polygon(100% 0, 100% 70%, 0 100%, 0 30%);
+				width: 100%;
+			}
 
 			&:first-child {
 				z-index: 1;
@@ -233,15 +240,18 @@
 			}
 
 			&:nth-child(2) {
-				@include animation(5s 20s fade forwards alternate);
+				@include animation(5s 5s fade forwards);
 				z-index: 2;
-				opacity: 0;
 			}
 
 			&:nth-child(3) {
-				@include animation(5s 40s fade forwards alternate);
+				@include animation(5s 10s fade forwards);
 				z-index: 3;
-				opacity: 0;
+			}
+ 
+			&:nth-child(4) {
+				@include animation(5s 15s fade forwards);
+				z-index: 4;
 			}
 		}
 	}
@@ -249,14 +259,14 @@
 	@include mq("large", "min-width") {
 
 		.poly-strip {
-			height: 800px;
+			height: 680px;
 		}
 	}
 
 	@include mq("medium", "max-width") {
 
 		.poly-strip {
-			height: 700px;
+			height: 690px;
 		}
 
 		.poly-strip img {	
@@ -274,7 +284,7 @@
 		}
 
 		.poly-strip {
-			height: 350px;
+			height: 600px;
 			width: 100%;
 			position: relative;
 
@@ -291,6 +301,7 @@
 
 	@include mq("super-small", "max-width") {
 		.poly-strip {
+			height: 330px;
 
 			img {
 				margin-top: 80px;
@@ -312,6 +323,8 @@
 
 	.row {
 		border-bottom: 1px solid $colorTwo;
+		z-index: 100;
+		position: relative;
 	}
 
 	.row:last-child {
@@ -511,6 +524,11 @@
 		padding: 40px 40px 0px 40px;
 	}
 
+	.row {
+		z-index: 100;
+		position: relative;
+	}
+
 	h2 {
 		margin-top: 0px;
 	}
@@ -559,6 +577,7 @@
 	#map {
 		width: 100%;
 		height: 500px;
+		z-index: 500;
 
 		a {
 			border-bottom: 0px;

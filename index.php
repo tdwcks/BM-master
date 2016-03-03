@@ -23,6 +23,8 @@
 	{
 	$lang = 'en';
 	}
+
+	$lang_ident = $lang;
 	 
 	switch ($lang) {
 	  case 'en':
@@ -52,7 +54,7 @@
 
 		<div class="col-3">
 
-		<a><img src="img/bm_logo.svg"/></a>
+		<a href="#home"><img src="img/bm_logo.svg"/></a>
 
 		</div> <!-- col-3 -->
 
@@ -60,7 +62,7 @@
 
 			<div id="nav-anchor"></div>
 
-			<nav>
+			<nav class="<?php echo $lang['CLASS']; ?>">
 
 				<ul>
 					<li class="home"><a href="#home"><?php echo $lang['MENU_HOME']; ?></a></li>
@@ -79,9 +81,8 @@
 			<div class="language-selector">
 
 				<?php 
-					switch ($lang) {
+					switch ($lang_ident) {
 					  case 'en':
-					  echo 'English';
 						echo '<a class="language-selected"><img src="img/great_britain.svg"/><span>English</span></a>';
 					  break;
 					 
@@ -170,11 +171,12 @@
 			<div class="row">
 
 				<div class="poly-strip">
-
-					<img src="img/bm-1.jpg">
-					<img src="img/bm-2.jpg">
-					<img src="img/bm-1.jpg">
-
+					<div class="fade-images">
+						<div><img src="img/top-1.jpg"></div>
+						<div><img src="img/top-2.jpg"></div>
+						<div><img src="img/top-4.jpg"></div>
+						<div><img src="img/top-3.jpg"></div>
+					</div>
 				</div> <!-- poly-strip -->
 
 			</div>  <!-- row -->
@@ -284,11 +286,11 @@
 			<div class="swiper-container">
 
 		        <div class="swiper-wrapper">
-		            <div class="swiper-slide"><img src="img/bm_1.jpg"></div>
+		        	<div class="swiper-slide"><img src="img/bm_5.jpg"></div>
+		         	<div class="swiper-slide"><img src="img/bm_4.jpg"></div>		            
 		            <div class="swiper-slide"><img src="img/bm_2.jpg"></div>
+		            <div class="swiper-slide"><img src="img/bm_1.jpg"></div>
 		            <div class="swiper-slide"><img src="img/bm_3.jpg"></div>
-		            <div class="swiper-slide"><img src="img/bm_4.jpg"></div>
-		            <div class="swiper-slide"><img src="img/bm_5.jpg"></div>
 		            <div class="swiper-slide"><img src="img/bm_6.jpg"></div>
 		        </div>
 		        <!-- Add Arrows -->

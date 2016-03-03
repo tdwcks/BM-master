@@ -46,6 +46,21 @@ html {
     -ms-transform: translateX(-1200px);
     -o-transform: translateX(-1200px);
     transform: translateX(-1200px); } }
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-moz-keyframes fade {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes fade {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 @-webkit-keyframes slideUp {
   0% {
     -webkit-transform: translateY(100px);
@@ -925,7 +940,7 @@ header {
     margin-top: 30px;
     margin-left: 0px; }
     header nav.spanish ul li {
-      padding-left: 10px; }
+      padding-left: 15px; }
       header nav.spanish ul li a {
         font-size: 1em; }
   header nav ul li {
@@ -985,7 +1000,7 @@ header {
       letter-spacing: 1px;
       text-decoration: none;
       clear: both;
-      width: 130px;
+      width: 140px;
       float: left;
       cursor: pointer;
       z-index: 5000; }
@@ -1030,6 +1045,7 @@ header {
       header a.home {
         margin-top: 25px; }
       header nav {
+        display: none;
         margin-top: 22px;
         margin-left: 25px; }
         header nav ul li {
@@ -1133,7 +1149,7 @@ header {
     position: fixed;
     overflow: hidden;
     height: 1000px;
-    z-index: -10;
+    z-index: -100;
     -webkit-animation: slide 60s linear alternate infinite;
     -moz-animation: slide 60s linear alternate infinite;
     animation: slide 60s linear alternate infinite; }
@@ -1231,6 +1247,9 @@ header {
     padding-top: 250px;
     z-index: 10;
     position: relative; }
+  .about .row {
+    z-index: 100;
+    position: relative; }
   .about .col-8 {
     display: block;
     margin: 0 auto;
@@ -1239,40 +1258,43 @@ header {
   .about .poly-strip {
     margin-top: 30px;
     width: 100%;
-    height: 800px;
-    -webkit-clip-path: polygon(100% 0, 100% 70%, 0 100%, 0 30%);
-    clip-path: polygon(100% 0, 100% 70%, 0 100%, 0 30%);
-    background: #f5f5f5;
+    height: 650px;
     overflow: hidden;
-    z-index: 100;
     position: relative; }
-    .about .poly-strip img {
+    .about .poly-strip div {
       width: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      top: 0; }
-      .about .poly-strip img:first-child {
+      opacity: 0; }
+      .about .poly-strip div img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        -webkit-clip-path: polygon(100% 0, 100% 70%, 0 100%, 0 30%);
+        clip-path: polygon(100% 0, 100% 70%, 0 100%, 0 30%);
+        width: 100%; }
+      .about .poly-strip div:first-child {
         z-index: 1;
         opacity: 1; }
-      .about .poly-strip img:nth-child(2) {
-        -webkit-animation: 5s 20s fade forwards alternate;
-        -moz-animation: 5s 20s fade forwards alternate;
-        animation: 5s 20s fade forwards alternate;
-        z-index: 2;
-        opacity: 0; }
-      .about .poly-strip img:nth-child(3) {
-        -webkit-animation: 5s 40s fade forwards alternate;
-        -moz-animation: 5s 40s fade forwards alternate;
-        animation: 5s 40s fade forwards alternate;
-        z-index: 3;
-        opacity: 0; }
+      .about .poly-strip div:nth-child(2) {
+        -webkit-animation: 5s 5s fade forwards;
+        -moz-animation: 5s 5s fade forwards;
+        animation: 5s 5s fade forwards;
+        z-index: 2; }
+      .about .poly-strip div:nth-child(3) {
+        -webkit-animation: 5s 10s fade forwards;
+        -moz-animation: 5s 10s fade forwards;
+        animation: 5s 10s fade forwards;
+        z-index: 3; }
+      .about .poly-strip div:nth-child(4) {
+        -webkit-animation: 5s 15s fade forwards;
+        -moz-animation: 5s 15s fade forwards;
+        animation: 5s 15s fade forwards;
+        z-index: 4; }
   @media (min-width: 1300px) {
     .about .poly-strip {
-      height: 800px; } }
+      height: 680px; } }
   @media (max-width: 1130px) {
     .about .poly-strip {
-      height: 700px; }
+      height: 690px; }
     .about .poly-strip img {
       -webkit-transform-origin: center center;
       -moz-transform-origin: center center;
@@ -1290,7 +1312,7 @@ header {
     .about .col-8 {
       width: 100%; }
     .about .poly-strip {
-      height: 350px;
+      height: 600px;
       width: 100%;
       position: relative; }
       .about .poly-strip img {
@@ -1300,9 +1322,11 @@ header {
         top: -40px;
         margin-left: 25px; } }
   @media (max-width: 595px) {
-    .about .poly-strip img {
-      margin-top: 80px;
-      margin-left: 25px; } }
+    .about .poly-strip {
+      height: 330px; }
+      .about .poly-strip img {
+        margin-top: 80px;
+        margin-left: 25px; } }
 
 .what {
   background: #f5f5f5;
@@ -1312,7 +1336,9 @@ header {
   .what p.large:last-child {
     padding-bottom: 100px; }
   .what .row {
-    border-bottom: 1px solid #d3d3d3; }
+    border-bottom: 1px solid #d3d3d3;
+    z-index: 100;
+    position: relative; }
   .what .row:last-child {
     border-bottom: 0; }
   .what img {
@@ -1434,6 +1460,9 @@ header {
   overflow: auto; }
   .contact .details {
     padding: 40px 40px 0px 40px; }
+  .contact .row {
+    z-index: 100;
+    position: relative; }
   .contact h2 {
     margin-top: 0px; }
   .contact h4 {
@@ -1467,7 +1496,8 @@ header {
     border-top: 1px solid #d3d3d3; }
   .contact #map {
     width: 100%;
-    height: 500px; }
+    height: 500px;
+    z-index: 500; }
     .contact #map a {
       border-bottom: 0px;
       font-size: 1em; }

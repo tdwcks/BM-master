@@ -9,6 +9,7 @@ $lang = array();
 
 // Global
 $lang['PAGE_TITLE'] = 'BM → Property &amp; Projects';
+$lang['CLASS'] = 'spanish';
 
 // Menu
 $lang['MENU_HOME'] = 'Inicio';
