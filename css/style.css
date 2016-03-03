@@ -130,7 +130,7 @@ html {
       border: none; } }
   @media (max-width: 760px) {
     .grid-container {
-      width: 90%; } }
+      width: 95%; } }
 
 .row:after {
   display: block;
@@ -832,7 +832,7 @@ button.swiper-pagination-bullet {
       height: 400px; } }
   @media (max-width: 760px) {
     .swiper-container {
-      height: 250px; } }
+      height: 300px; } }
 
 .swiper-slide {
   text-align: center;
